@@ -1,6 +1,20 @@
 = Progress
 
-A simple, reusable, textual progress "bar"
+A simple, reusable, textual progress "bar" for long-running tasks.
+
+  # About to process 10,000 objects.
+  queue = 10000.times.map { Object }
+  progress = Progress.new(queue.size)
+
+  until queue.size == 0 do
+    batch = queue.pop(1)
+    # Do something to `batch` here.
+    sleep 0.025
+    progress.done += batch.size
+
+    # How much longer do I have to wait for this thing?
+    puts progress # => 2.37% (237 of 10000) at 35.08 per second, 5 minutes (9763) remaining
+  end
 
 Features
 * Estimates time to completion
