@@ -1,6 +1,11 @@
-= progress
+= Progress
 
-Description goes here.
+A simple, reusable, textual progress "bar"
+
+Features
+* Estimates time to completion
+* Handles overflow gracefully
+* Simple API
 
 == Contributing to progress
  
