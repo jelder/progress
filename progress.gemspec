@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/progress.rb",
     "lib/progress/progress.rb",
+    "progress.gemspec",
     "test/helper.rb",
     "test/test_progress.rb"
   ]
